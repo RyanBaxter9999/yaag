@@ -153,6 +153,12 @@ func ReadHeaders(req *http.Request) map[string]string {
 		if strings.EqualFold(values[0], "") {
 			continue
 		}
+		if values[0] == "Postman-Token" {
+			continue
+		}
+		if values[0] == "Authorization" {
+			values[1] = "Bearer {{jwt token}}"
+		}
 		headers[values[0]] = values[1]
 	}
 	return headers
