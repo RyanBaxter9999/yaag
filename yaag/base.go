@@ -202,7 +202,7 @@ const Template = `<!DOCTYPE html>
                     }
                 </script>
                 {{ end }}
-                <hr>
+                <hr style="border-top: 10px solid #000000">
             {{ end }}
         </div>
         {{ end }}
